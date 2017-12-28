@@ -49,7 +49,7 @@ let main = {
           }
         }
       }
-      if(flag){
+      if (flag) {
         axios.delete(`http://localhost:3009/movies/${id}`).then((res) => {
           window.location.reload();
         }).catch(function(err) {
@@ -83,17 +83,19 @@ let main = {
           modal.style.display = "none";
           // console.log("确定添加");
           main.addData();
-        },false);
+        }, false);
         cancel.addEventListener('click', function(e) {
           e.stopImmediatePropagation();
           modal.style.display = "none";
+          main.doInputReset();
           // console.log("取消添加");
-        },false);
+        }, false);
         close.addEventListener('click', function(e) {
           e.stopImmediatePropagation();
           modal.style.display = "none";
+          main.doInputReset();
           // console.log("关闭按钮");
-        },false);
+        }, false);
       }
     }, false);
   },
@@ -101,20 +103,28 @@ let main = {
   getDataFromForm: function() {
     let tagElements = document.getElementsByTagName("input");
     let movieData = {};
-    for(let item of tagElements){
+    for (let item of tagElements) {
       movieData[item.name] = item.value;
     }
     console.log(movieData);
     return movieData;
   },
 
-  addData: function(){
+  addData: function() {
     const data = main.getDataFromForm();
     // console.log(data);
-    axios.post('http://localhost:3009/movies',data).then((res)=>{
+    axios.post('http://localhost:3009/movies', data).then((res) => {
       window.location.reload();
     }).catch((e) => {
       console.log(e);
     });
+  },
+
+  doInputReset: function() {
+    for (i = 0; i < document.getElementsByTagName("input").length; i++) {
+      if (document.getElementsByTagName("input")[i].type == "text") {
+        document.getElementsByTagName("input")[i].value = "";
+      }
+    }
   }
 };
