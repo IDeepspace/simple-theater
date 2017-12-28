@@ -1,0 +1,8 @@
+{
+  "name": "ten-dogs",
+  "version": "0.1.0",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "json-server": "^0.12.1"
+  }
+}
