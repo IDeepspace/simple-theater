@@ -15,7 +15,7 @@ $ cd api/
 $ npm start
 ```
 
-#### 3.open the  `index.html` in your browser
+#### 3.open the  `public\index.html` in your browser
 
 
 

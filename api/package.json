@@ -7,5 +7,8 @@
     "start": "json-server --watch db.json --port 3009"
   },
   "author": "Deepspace",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
 }
