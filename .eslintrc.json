@@ -1,0 +1,15 @@
+{
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "semi": "error",
+    "quotes": [
+      1,
+      "single"
+    ]
+  },
+  "plugins": [
+    "html"
+  ]
+}

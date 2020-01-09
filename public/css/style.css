@@ -11,14 +11,23 @@ li {
   min-height: 100vh;
 }
 .header {
-  padding: 25px;
+  padding: 25px 55px;
   background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header a {
   text-decoration: none;
   color: white;
   display: block;
   font-size: 20px;
+}
+
+.header .add-movie {
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 /* --------------main start---------------- */
@@ -60,18 +69,6 @@ li {
 }
 .movie-box:hover .delete-icon {
   display: block;
-}
-.add-movie {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 300px;
-  font-size: 80px;
-  color: #212121;
-  cursor: pointer;
 }
 
 /* --------------main end---------------- */
